@@ -3,113 +3,480 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ing M Sc. Romel P. Melgarejo-Bolivar - Perfil Profesional</title>
-    <!-- Mantendremos el estilo CSS proporcionado por ti -->
-    <!-- OMITIDO PARA BREVEDAD: Se asume que el bloque <style> sigue igual -->
+    <title>Dr. Romel Percy Melgarejo Bolívar - Perfil Académico</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.5;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: #34495e;
+            color: white;
+            padding: 20px;
+            margin: -20px -20px 30px -20px;
+            border-left: 5px solid #3498db;
+        }
+
+        .class-declaration {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        .class-name {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .extends {
+            font-size: 16px;
+            color: #e74c3c;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: #ecf0f1;
+            padding: 15px;
+            border-bottom: 1px solid #bdc3c7;
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+
+        .section-content {
+            padding: 20px;
+        }
+
+        .variable {
+            margin-bottom: 15px;
+            font-family: 'Courier New', monospace;
+        }
+
+        .data-type {
+            color: #8e44ad;
+            font-weight: bold;
+        }
+
+        .variable-name {
+            color: #2980b9;
+            font-weight: bold;
+        }
+
+        .value {
+            color: #27ae60;
+        }
+
+        .string-value {
+            color: #e67e22;
+        }
+
+        .comment {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .array {
+            margin-left: 20px;
+        }
+
+        .array-item {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            border-left: 2px solid #3498db;
+        }
+
+        .method {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .method-signature {
+            color: #8e44ad;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .method-body {
+            margin-left: 20px;
+            color: #2c3e50;
+        }
+
+        .annotation {
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        .publication {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+
+        .publication-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        .publication-details {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .metric-item {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2980b9;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: #7f8c8d;
+            text-transform: uppercase;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .contact-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+
+        .identifier {
+            font-family: 'Courier New', monospace;
+            background: #ecf0f1;
+            padding: 5px;
+            border-radius: 3px;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .class-name {
+                font-size: 20px;
+            }
+            
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <div class="profile-img">RP</div>
-            <h1>M Sc. Romel P. Melgarejo-Bolivar</h1>
-            <p class="subtitle">Doctor en Ciencias de la Computación | Especialista en Redes | Docente Universitario</p>
-        </header>
-
-        <nav class="nav">
-            <a href="#perfil">Perfil</a>
-            <a href="#educacion">Educación</a>
-            <a href="#experiencia">Experiencia</a>
-            <a href="#publicaciones">Investigación</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-
-        <div class="content">
-            <section id="perfil" class="section fade-in">
-                <h2>Perfil Profesional</h2>
-                <p>Ingeniero Estadístico e Informático con Doctorado en Ciencias de la Computación y Maestría en Informática con mención en Gerencia de Tecnologías de la Comunicación. Docente universitario, asesor de tesis e investigador en el campo de redes de comunicaciones, bases de datos y desarrollo de software.</p>
-                <p>Actualmente docente en la Universidad Nacional del Altiplano y Universidad Nacional de Moquegua. Especialista en redes y medios físicos de transmisión de datos para servicios como internet, intranet y telefonía IP. Registrado en RENACYT (Código: P0067043), con identificadores de investigación:</p>
-                <ul>
-                    <li>ORCID: 0000-0001-9383-9136</li>
-                    <li>Scopus ID: 58778725100</li>
-                    <li>ResearcherID: HHD-3337-2022</li>
-                </ul>
-            </section>
-
-            <section id="educacion" class="section fade-in">
-                <h2>Formación Académica</h2>
-                <div class="education-item">
-                    <span class="year">Doctorado</span>
-                    <h3>Ciencias de la Computación</h3>
-                    <p><strong>Universidad Nacional del Altiplano</strong></p>
-                </div>
-                <div class="education-item">
-                    <span class="year">Maestría</span>
-                    <h3>Informática - Gerencia de las Tecnologías de la Comunicación</h3>
-                    <p><strong>Universidad Nacional del Altiplano</strong></p>
-                </div>
-                <div class="education-item">
-                    <span class="year">Segunda Especialidad</span>
-                    <h3>Didáctica de la Educación Universitaria / Informática</h3>
-                </div>
-                <div class="education-item">
-                    <span class="year">Pregrado</span>
-                    <h3>Ingeniería Estadística e Informática</h3>
-                    <p><strong>Universidad Nacional del Altiplano</strong></p>
-                </div>
-            </section>
-
-            <section id="experiencia" class="section fade-in">
-                <h2>Experiencia Profesional</h2>
-                <div class="education-item">
-                    <span class="year">Actualidad</span>
-                    <h3>Docente universitario y asesor de tesis</h3>
-                    <p><strong>Universidad Nacional del Altiplano - Puno</strong> y <strong>Universidad Nacional de Moquegua</strong></p>
-                </div>
-                <div class="education-item">
-                    <h3>Consultor y desarrollador</h3>
-                    <p>Proyectos tecnológicos en redes, bases de datos, desarrollo web y automatización de procesos.</p>
-                </div>
-            </section>
-
-            <section id="publicaciones" class="section fade-in">
-                <h2>Investigación</h2>
-                <div class="publication-item">
-                    <h3>Producción científica</h3>
-                    <p>Revisa publicaciones indexadas en bases de datos internacionales:</p>
-                    <ul>
-                        <li><a href="https://orcid.org/0000-0001-9383-9136" target="_blank">ORCID</a></li>
-                        <li><a href="https://www.scopus.com/authid/detail.uri?authorId=58778725100" target="_blank">Scopus</a></li>
-                        <li><a href="https://www.webofscience.com/wos/author/record/HHD-3337-2022" target="_blank">ResearcherID</a></li>
-                        <li><a href="https://renacyt.concytec.gob.pe/" target="_blank">RENACYT - CONCYTEC</a></li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="contacto" class="section fade-in">
-                <h2>Contacto</h2>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <h4>Correo</h4>
-                        <p>romelpercy@unap.edu.pe</p>
-                        <p>rpmelgarejob@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>Ubicación</h4>
-                        <p>Puno, Perú</p>
-                        <p>Facultad de Ingeniería Estadística e Informática</p>
-                    </div>
-                    <div class="contact-item">
-                        <h4>GitHub Page</h4>
-                        <p><a href="https://romelpercy.github.io" target="_blank">romelpercy.github.io</a></p>
-                    </div>
-                </div>
-            </section>
+        <div class="header">
+            <div class="class-declaration">/** @author Romel Percy Melgarejo Bolívar */</div>
+            <div class="class-name">public class DocenteUniversitario</div>
+            <div class="extends">extends Investigador implements EspecialistaInformatica</div>
         </div>
 
-        <footer class="footer">
-            <p>&copy; 2025 Ing. M. Sc. Romel P. Melgarejo-Bolivar. Todos los derechos reservados.</p>
-            <p>Actualizado en agosto de 2025</p>
-        </footer>
+        <!-- Información Personal -->
+        <div class="section">
+            <div class="section-header">// Información Personal y Académica</div>
+            <div class="section-content">
+                <div class="variable">
+                    <span class="data-type">private String</span> 
+                    <span class="variable-name">nombreCompleto</span> = 
+                    <span class="string-value">"Romel Percy Melgarejo Bolívar"</span>;
+                </div>
+                <div class="variable">
+                    <span class="data-type">private String</span> 
+                    <span class="variable-name">codigoRenacyt</span> = 
+                    <span class="string-value">"P0067043"</span>;
+                </div>
+                <div class="variable">
+                    <span class="data-type">private String</span> 
+                    <span class="variable-name">institucionActual</span> = 
+                    <span class="string-value">"Universidad Nacional del Altiplano - UNAP"</span>;
+                </div>
+                <div class="variable">
+                    <span class="data-type">private String</span> 
+                    <span class="variable-name">cargo</span> = 
+                    <span class="string-value">"Docente Contratado"</span>;
+                </div>
+                <div class="variable">
+                    <span class="data-type">private Date</span> 
+                    <span class="variable-name">inicioLaboral</span> = 
+                    <span class="value">new Date("2020-03-01")</span>;
+                </div>
+            </div>
+        </div>
+
+        <!-- Formación Académica -->
+        <div class="section">
+            <div class="section-header">// Formación Académica</div>
+            <div class="section-content">
+                <div class="variable">
+                    <span class="data-type">private List&lt;Titulo&gt;</span> 
+                    <span class="variable-name">formacionAcademica</span> = Arrays.asList(
+                </div>
+                <div class="array">
+                    <div class="array-item">
+                        <span class="string-value">"Doctor en Ciencias de la Computación"</span>,
+                    </div>
+                    <div class="array-item">
+                        <span class="string-value">"Magister Scientiae en Informática - Mención: Gerencia de TIC"</span>,
+                    </div>
+                    <div class="array-item">
+                        <span class="string-value">"Ingeniero Estadístico e Informático (UNAP)"</span>,
+                    </div>
+                    <div class="array-item">
+                        <span class="string-value">"Segunda Especialidad en Informática"</span>,
+                    </div>
+                    <div class="array-item">
+                        <span class="string-value">"Segunda Especialidad en Didáctica de la Educación Universitaria"</span>
+                    </div>
+                </div>
+                <div class="variable">);</div>
+            </div>
+        </div>
+
+        <!-- Especialidades Técnicas -->
+        <div class="section">
+            <div class="section-header">// Especialidades Técnicas</div>
+            <div class="section-content">
+                <div class="variable">
+                    <span class="data-type">private Set&lt;String&gt;</span> 
+                    <span class="variable-name">especialidades</span> = new HashSet&lt;&gt;(Arrays.asList(
+                </div>
+                <div class="array">
+                    <div class="array-item"><span class="string-value">"Redes de Comunicación"</span>,</div>
+                    <div class="array-item"><span class="string-value">"Bases de Datos"</span>,</div>
+                    <div class="array-item"><span class="string-value">"Desarrollo de Software"</span>,</div>
+                    <div class="array-item"><span class="string-value">"Ciencia de Datos"</span>,</div>
+                    <div class="array-item"><span class="string-value">"Redes Telemáticas"</span>,</div>
+                    <div class="array-item"><span class="string-value">"TIC para Educación"</span></div>
+                </div>
+                <div class="variable">));</div>
+            </div>
+        </div>
+
+        <!-- Experiencia Profesional -->
+        <div class="section">
+            <div class="section-header">// Experiencia Profesional</div>
+            <div class="section-content">
+                <div class="method">
+                    <div class="method-signature">
+                        <span class="annotation">@Actual</span><br>
+                        public void docenteContratadoUNAP() {
+                    </div>
+                    <div class="method-body">
+                        <div class="comment">// Docente en pregrado y posgrado desde marzo 2020</div>
+                        <div class="comment">// Áreas: Estadística e Informática</div>
+                        institucion = "Universidad Nacional del Altiplano";<br>
+                        periodo = "2020 - Actualidad";
+                    </div>
+                    <div>}</div>
+                </div>
+
+                <div class="method">
+                    <div class="method-signature">
+                        <span class="annotation">@Anterior</span><br>
+                        public void docenteVariasUniversidades() {
+                    </div>
+                    <div class="method-body">
+                        <div class="comment">// Docente en Escuela de Posgrado UNAP y UNAM</div>
+                        periodo = "2015 - 2022";<br>
+                        universidades = {"UNAP", "Universidad Nacional de Moquegua"};
+                    </div>
+                    <div>}</div>
+                </div>
+
+                <div class="method">
+                    <div class="method-signature">
+                        <span class="annotation">@Liderazgo</span><br>
+                        public void presidenteCapituloIngenieros() {
+                    </div>
+                    <div class="method-body">
+                        <div class="comment">// Presidente Capítulo Ing. Estadísticos e Informáticos</div>
+                        organizacion = "Colegio de Ingenieros del Perú - Sede Puno";<br>
+                        periodo = "Octubre 2022 - Actualidad";
+                    </div>
+                    <div>}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producción Científica -->
+        <div class="section">
+            <div class="section-header">// Producción Científica e Impacto</div>
+            <div class="section-content">
+                <div class="metrics">
+                    <div class="metric-item">
+                        <div class="metric-value">9</div>
+                        <div class="metric-label">Publicaciones</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">221</div>
+                        <div class="metric-label">Citas</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">336</div>
+                        <div class="metric-label">Lecturas</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">2015-2024</div>
+                        <div class="metric-label">Años Activo</div>
+                    </div>
+                </div>
+
+                <div class="variable">
+                    <span class="data-type">private List&lt;Publicacion&gt;</span> 
+                    <span class="variable-name">publicacionesRecientes</span> = Arrays.asList(
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        "Echocardiographic cardiac views classification using whale optimization..."
+                    </div>
+                    <div class="publication-details">Julio 2024 | ResearchGate</div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        "6G Traffic Prediction with a Novel Parallel Convolutional Neural Networks Architecture..."
+                    </div>
+                    <div class="publication-details">Enero 2024 | Journal Indexado</div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">
+                        "Arquitectura Pervasiva con tecnologías WebRTC..."
+                    </div>
+                    <div class="publication-details">Mayo 2022 | Conferencia Internacional</div>
+                </div>
+
+                <div class="variable">);</div>
+            </div>
+        </div>
+
+        <!-- Asesorías de Tesis -->
+        <div class="section">
+            <div class="section-header">// Actividad de Asesoría Académica</div>
+            <div class="section-content">
+                <div class="method">
+                    <div class="method-signature">
+                        public int getTesisAsesoradas() {
+                    </div>
+                    <div class="method-body">
+                        <div class="comment">// Múltiples tesis de licenciatura y bachillerato</div>
+                        <div class="comment">// Áreas: Estadística e Informática</div>
+                        periodo = "2015 - 2024";<br>
+                        institucion = "UNAP";<br>
+                        return numeroTesisAsesoradas; <div class="comment">// Valor en constante crecimiento</div>
+                    </div>
+                    <div>}</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Identificadores Académicos -->
+        <div class="section">
+            <div class="section-header">// Identificadores Académicos y Contacto</div>
+            <div class="section-content">
+                <div class="contact-grid">
+                    <div class="contact-item">
+                        <strong>ORCID ID:</strong><br>
+                        <div class="identifier">0000-0001-9383-9136</div>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Scopus Author ID:</strong><br>
+                        <div class="identifier">58778725100</div>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Web of Science ID:</strong><br>
+                        <div class="identifier">HHD-3337-2022</div>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Código RENACYT:</strong><br>
+                        <div class="identifier">P0067043</div>
+                    </div>
+                </div>
+
+                <div class="variable" style="margin-top: 20px;">
+                    <span class="data-type">private Map&lt;String, String&gt;</span> 
+                    <span class="variable-name">perfilesAcademicos</span> = Map.of(
+                </div>
+                <div class="array">
+                    <div class="array-item"><span class="string-value">"ResearchGate"</span>, <span class="string-value">"researchgate.net/profile/Romel-Melgarejo"</span>,</div>
+                    <div class="array-item"><span class="string-value">"Google Scholar"</span>, <span class="string-value">"scholar.google.com/citations"</span>,</div>
+                    <div class="array-item"><span class="string-value">"CONCYTEC"</span>, <span class="string-value">"ctivitae.concytec.gob.pe"</span></div>
+                </div>
+                <div class="variable">);</div>
+            </div>
+        </div>
+
+        <!-- Constructor/Footer -->
+        <div class="section">
+            <div class="section-header">// Constructor de Clase</div>
+            <div class="section-content">
+                <div class="method">
+                    <div class="method-signature">
+                        public DocenteUniversitario() {
+                    </div>
+                    <div class="method-body">
+                        <div class="comment">// Instancia creada con dedicación a la investigación</div>
+                        <div class="comment">// y formación de nuevos profesionales en TIC</div>
+                        this.mision = "Contribuir al desarrollo tecnológico y científico";<br>
+                        this.vision = "Liderar la investigación en Ciencias de la Computación";<br>
+                        this.compromiso = "Excelencia académica y profesional";
+                    </div>
+                    <div>}</div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
